@@ -2,9 +2,6 @@
         class="panel panel-default" >
         <div class="panel-heading">{{ element.name }}</div>
         <div class="panel-body">
-          <p>
-            <strong *ngIf="element.type === 'server'" style="color: red">{{ element.content }}</strong>
-            <em *ngIf="element.type === 'blueprint'">{{ element.content }}</em>
-          </p>
+          <ng-content></ng-content>  <!--this is the hook to replace the HTML from the parent component, So the content is dynamically replaced -->
         </div>
       </div>
